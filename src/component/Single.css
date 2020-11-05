@@ -1,0 +1,11 @@
+.single-container {
+    width: 100vw;
+}
+
+.single-pn {
+    width: calc(100vw - 50px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 20px;
+}
