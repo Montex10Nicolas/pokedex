@@ -5,7 +5,7 @@ const FOURTH_GEN = 107;
 const FIFTH_GEN = 156;
 const SIXTH_GEN = 72;
 const SEVENTH_GEN = 88;
-const EIGHTH_GEN = 91;
+const EIGHTH_GEN = 84;
 
 export default
     [FIRST_GEN,

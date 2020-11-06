@@ -20,7 +20,8 @@ export const All: React.FC = () => {
                         <Link to={`/pokemon/${pokemon.name}`}>
                             <div key={`Main:${pokemon.id}`} className="main-box" >
                                 <div className="main-pokemon-sprite">
-                                    <img alt={`Immagine di ${pokemon.name}`} src={pokemon.sprites.other["official-artwork"].front_default} />
+                                    <img alt={`immagine di ${pokemon.name}`}
+                                     src={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`} />
                                 </div>
 
                                 <div className="main-pokemon-info">
