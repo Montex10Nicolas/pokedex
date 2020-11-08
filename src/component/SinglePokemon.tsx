@@ -43,10 +43,11 @@ export const SinglePokemon = () => {
                 <Link to={`/pokemon/${pokemon.id - 1}`}><p>#{pokemon && pokemon.id - 1}</p></Link>
                 <Link to={`/pokemon/${pokemon.id + 1}`}><p>#{pokemon.id + 1}</p></Link>
             </div >
+            <hr/>
 
             <div className="single-pokemon">
                 <p style={{ gridArea: "name" }}>{pokemon.name}</p>
-                <p style={{ gridArea: "index" }}>{pokemon.id}</p>
+                <p style={{ gridArea: "index" }}>#{pokemon.id}</p>
                 <img style={{ gridArea: "sprite" }} src={pokemon.sprites.other["official-artwork"].front_default} />
                 <div className="single-tipi">
                     {
@@ -57,18 +58,20 @@ export const SinglePokemon = () => {
                         ))
                     }
                 </div>
-                <div style={{ gridArea: "abilita" }}>
-                    <p>Abilita</p>
-                    {
-                        pokemon.abilities.map((el: any) => (
-                            <p>{el.ability.name}</p>
-                        ))
-                    }
+                <div className="single-ability-container" >
+                    <p>abilities:</p>
+                    <div className="single-ability-grid">
+                        {
+                            pokemon.abilities.map((el: any) => (
+                                <p>{el.ability.name}</p>
+                            ))
+                        }
+                    </div>
                 </div>
 
                 <div>
-                    <p>Weight: {pokemon.weight / 10}</p>
-                    <p>Height: {pokemon.height * 10}</p>
+                    <p>weight: {pokemon.weight / 10}kg</p>
+                    <p>height: {pokemon.height / 10}m</p>
                 </div>
             </div>
         </div >

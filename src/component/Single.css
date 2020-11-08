@@ -10,23 +10,32 @@
     margin: 5px 20px;
 }
 
-.single-pn > * {
+.single-pn>* {
     text-decoration: none;
 }
 
 .single-pokemon {
     margin: 5px 50px;
     display: grid;
-    grid-template-areas: 
-    "name index"
-    "sprite abilita"
-    "sprite tipi"
-    "sprite info";
+    grid-template-areas: "name index" "sprite abilita" "sprite tipi" "sprite info";
+}
+
+.single-pokemon > * {
+    text-transform: capitalize;
 }
 
 .single-tipi {
     grid-area: tipi;
     display: flex;
+}
+
+.single-ability-container {
+    grid-area: abilita;
+}
+
+.single-ability-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .single-type-container {
@@ -37,4 +46,3 @@
     margin: 0px 0px 0px 10px;
     border-radius: 20px;
 }
-
